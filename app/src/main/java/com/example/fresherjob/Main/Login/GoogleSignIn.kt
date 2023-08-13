@@ -1,10 +1,12 @@
-package com.example.fresherjob
+package com.example.fresherjob.Main.Login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.fresherjob.Main.JobListing.JobListActivity
+import com.example.fresherjob.R
 import com.example.fresherjob.databinding.ActivityGoogleSignInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -48,7 +50,6 @@ class GoogleSignIn : AppCompatActivity() {
     }
 
     private  fun signInGoogle(){
-
         val signInIntent: Intent =mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent,Req_Code)
     }
@@ -58,7 +59,6 @@ class GoogleSignIn : AppCompatActivity() {
         if(requestCode==Req_Code){
             val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleResult(task)
-//            firebaseAuthWithGoogle(account!!)
         }
     }
 
@@ -77,10 +77,20 @@ class GoogleSignIn : AppCompatActivity() {
         val credential= GoogleAuthProvider.getCredential(account.idToken,null)
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener {task->
             if(task.isSuccessful) {
-                SavedPreference.setEmail(this,account.email.toString())
-                SavedPreference.setUsername(this,account.displayName.toString())
-
+                SavedPreference.setEmail(this, account.email.toString())
+                SavedPreference.setUsername(this, account.displayName.toString())
+                val intent = Intent(this, JobListActivity::class.java)
+                startActivity(intent)
+                finish()
             }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if(GoogleSignIn.getLastSignedInAccount(this)!=null){
+            startActivity(Intent(this, JobListActivity::class.java))
+            finish()
         }
     }
 

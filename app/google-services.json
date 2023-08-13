@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "627593330237-7dacp1up01m6jiv7j1rlkrvbsbuvq0bv.apps.googleusercontent.com",
+          "client_id": "627593330237-pop0p0n52pg649mltuqahro4hijvhuur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fresherjob",
+            "certificate_hash": "5b51d786d995a428c583f9a8232094d11e54636a"
+          }
+        },
+        {
+          "client_id": "627593330237-pp9675bt0i0p3l0qpmmogdsl1c8bkjss.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

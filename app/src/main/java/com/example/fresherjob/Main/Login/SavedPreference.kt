@@ -1,4 +1,4 @@
-package com.example.fresherjob
+package com.example.fresherjob.Main.Login
 
 import android.content.Context
 import android.content.SharedPreferences
