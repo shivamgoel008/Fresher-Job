@@ -67,6 +67,7 @@ android {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.firebase:firebase-database-ktx:20.2.2")
     testImplementation("junit:junit:4.13.2")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")

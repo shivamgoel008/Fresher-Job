@@ -6,5 +6,7 @@ data class JobPost(
     var jobSalary:String?=null,
     var jobSkills:Array<String>?=null,
     var jobStatus:Boolean,
-    var jobTitle:String
+    var jobTitle:String,
+    var jobCompany:String,
+    var jobExperience:String
 )
