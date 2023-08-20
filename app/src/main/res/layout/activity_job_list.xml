@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Main.Login.GoogleSignIn">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:background="@android:color/holo_orange_light"
-        app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/jobPostRecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/job_post_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

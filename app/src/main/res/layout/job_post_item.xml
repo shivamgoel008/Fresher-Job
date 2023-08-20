@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/companyImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/jobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Software Development Engineer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/companyImage"
+                app:layout_constraintTop_toTopOf="@+id/companyImage" />
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Adobe "
+                app:layout_constraintStart_toStartOf="@+id/jobTitle"
+                app:layout_constraintTop_toBottomOf="@+id/jobTitle" />
+
+            <ImageView
+                android:id="@+id/experienceImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/companyName"
+                app:layout_constraintTop_toBottomOf="@+id/companyName"
+                app:srcCompat="@drawable/baseline_badge_24" />
+
+            <TextView
+                android:id="@+id/experienceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fresher"
+                app:layout_constraintBottom_toBottomOf="@+id/experienceImage"
+                app:layout_constraintStart_toEndOf="@+id/experienceImage"
+                app:layout_constraintTop_toTopOf="@+id/experienceImage"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <ImageView
+                android:id="@+id/salaryImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/experienceImage"
+                app:layout_constraintStart_toEndOf="@+id/experienceText"
+                app:layout_constraintTop_toTopOf="@+id/experienceImage"
+                app:srcCompat="@drawable/baseline_currency_rupee_24" />
+
+            <TextView
+                android:id="@+id/salaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10L"
+                app:layout_constraintBottom_toBottomOf="@+id/experienceImage"
+                app:layout_constraintStart_toEndOf="@+id/salaryImage"
+                app:layout_constraintTop_toTopOf="@+id/experienceImage" />
+
+            <ImageView
+                android:id="@+id/locationImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/salaryImage"
+                app:layout_constraintStart_toEndOf="@+id/salaryText"
+                app:layout_constraintTop_toTopOf="@+id/salaryImage"
+                app:srcCompat="@drawable/baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/locationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banglore"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImage"
+                app:layout_constraintStart_toEndOf="@+id/locationImage"
+                app:layout_constraintTop_toTopOf="@+id/locationImage" />
+
+            <TextView
+                android:id="@+id/skillsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="simply | dummy | text | printing "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.342"
+                app:layout_constraintStart_toEndOf="@+id/companyImage"
+                app:layout_constraintTop_toBottomOf="@+id/salaryText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
