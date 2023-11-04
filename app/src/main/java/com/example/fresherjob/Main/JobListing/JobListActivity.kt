@@ -41,7 +41,6 @@ class JobListActivity : AppCompatActivity() {
                     jobPostRecyclerView.adapter=JobPostsAdapter(jobPostsArrayList)
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
